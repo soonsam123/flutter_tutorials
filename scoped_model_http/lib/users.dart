@@ -32,16 +32,15 @@ class _UsersPageState extends State<UsersPage> {
   Widget _buildBody() {
     return ScopedModelDescendant<UserModel>(
       builder: (BuildContext context, Widget child, UserModel model) {
-        print('buildScopedModelDescendant');
-        if (model.users.length > 0) {
-          print('building ListView');
-          return _buildListView(model);
-        } else {
-          print('building Text');
-          return Center(
-            child: Text('No users'),
+        Widget content = Text('No users');
+        if (model.isLoading) {
+          content = Center(
+            child: CircularProgressIndicator(),
           );
+        } else if (!model.isLoading && model.users.length > 0) {
+          content = _buildListView(model);
         }
+        return content;
       },
     );
   }

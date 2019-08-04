@@ -6,12 +6,19 @@ import '../model/user.dart';
 
 class UserModel extends Model {
   List<User> _users = [];
+  bool _isLoading = false;
 
   List<User> get users {
     return _users;
   }
 
+  bool get isLoading {
+    return _isLoading;
+  }
+
   void fetchUsers() async {
+    _isLoading = true;
+    notifyListeners();
     try {
       http.Response response = await http.get('https://api.github.com/users');
       if (response.statusCode == 200 || response.statusCode == 201) {
@@ -23,11 +30,13 @@ class UserModel extends Model {
           fetchedUserList.add(user);
         });
         _users = fetchedUserList;
-        print(_users.length);
-        notifyListeners();
       }
+      _isLoading = false;
+      notifyListeners();
     } catch (error) {
       print(error);
+      _isLoading = false;
+      notifyListeners();
     }
   }
 }
