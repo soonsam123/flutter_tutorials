@@ -87,6 +87,4 @@ class _UsersPageState extends State<UsersPage> {
     _usersBloc.dispose();
     super.dispose();
   }
-
-
 }
