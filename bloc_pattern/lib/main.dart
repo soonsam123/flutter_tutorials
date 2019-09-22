@@ -1,14 +1,9 @@
-import 'package:bloc_pattern/bloc/users_event.dart';
-import 'package:bloc_pattern/bloc/users_state.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:http/http.dart' as http;
-
-import 'package:bloc/bloc.dart';
-
+import 'package:bloc_pattern/bloc/users.dart';
 import 'package:bloc_pattern/repositories/repositories.dart';
 import 'package:bloc_pattern/models/models.dart';
-import 'package:bloc_pattern/bloc/users_bloc.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 
 main() {
   runApp(App());

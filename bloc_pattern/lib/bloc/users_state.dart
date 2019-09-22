@@ -1,6 +1,5 @@
 import 'package:meta/meta.dart';
 import 'package:equatable/equatable.dart';
-
 import 'package:bloc_pattern/models/models.dart';
 
 abstract class UsersState extends Equatable {

@@ -1,7 +1,5 @@
 import 'dart:async';
-
 import 'package:meta/meta.dart';
-
 import 'package:bloc_pattern/repositories/repositories.dart';
 import 'package:bloc_pattern/models/models.dart';
 
