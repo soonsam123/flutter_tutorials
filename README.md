@@ -14,3 +14,5 @@ This repository has some flutter basic tutorials to guide your in your flutter j
 5. [How to fetch network data (using http and ScopedModel).](https://medium.com/@soonsantos/how-to-fetch-network-data-in-flutter-using-http-and-scopedmodel-7d00728369a)
 
 6. [Favorite Videos.](https://flutter.dev/docs/development/ui/widgets-intro#bringing-it-all-together)
+
+7. [Easiest way to understand Bloc.](https://blog.usejournal.com/easiest-way-to-understand-bloc-with-flutter-8ff51a989e17)
